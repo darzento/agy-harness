@@ -73,4 +73,4 @@ allowed-tools:
    - `omc-executor`들이 작업을 완료하여 JSON 메시지로 보고하면, 이를 `omc-reviewer` 인스턴스에 즉시 매핑하여 검증을 요청합니다.
 4. **통합 및 검증 (Fan-in)**:
    - 검증이 불합격(`FAIL`)인 경우, `omc-reviewer`가 도출한 리포트를 JSON의 `content`에 적어 `omc-executor`에게 리팩토링 요청(`REFACTOR_REQUEST`)을 송신하고 수정을 반복하게 합니다.
-   - 모든 검증이 최종 `PASS`한 경우에 한해, 임시 산출물들을 병합하여 사용자에게 최종적으로 인도합니다.
+   - 모든 검증이 최종 `PASS`한 경우에 한해, 임시 산출물들을 사용자가 확인한 이후에 병합하여 최종적으로 인도합니다.
